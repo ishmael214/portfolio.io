@@ -10,7 +10,7 @@ showProjects.addEventListener('click', () => {
                     <div class="projects">
                         <img src="/media/realestate.jpg">
                         <div class="options">
-                            <h4>View Desc</h4>
+                            <h4 class="desc">View Desc</h4>
                             <h4>View Project</h4>
                             <h4>View Code</h4>
                         </div> 
@@ -21,7 +21,7 @@ showProjects.addEventListener('click', () => {
                     <div class="projects">
                         <img src="/media/myflix.jpg">
                         <div class="options">
-                            <h4>View Desc</h4>
+                            <h4 class="desc">View Desc</h4>
                             <h4>View Project</h4>
                             <h4>View Code</h4>
                         </div>  
@@ -31,7 +31,7 @@ showProjects.addEventListener('click', () => {
                     <div class="projects">
                         <img src="/media/pokedex.jpg">
                         <div class="options">
-                            <h4>View Desc</h4>
+                            <h4 class="desc">View Desc</h4>
                             <h4>View Project</h4>
                             <h4>View Code</h4>
                         </div> 
@@ -41,4 +41,22 @@ showProjects.addEventListener('click', () => {
                     
     </div>
     `
+    const viewDesc = document.querySelectorAll(".desc");
+    console.log(viewDesc);
+
+    for ( const x of viewDesc) {
+        x.addEventListener('click', () => {
+            if (x === viewDesc[0]) {
+
+            } else if (x === viewDesc[1]) {
+
+            } else {
+                
+            }
+        })
+    }
 })
+
+
+
+    
