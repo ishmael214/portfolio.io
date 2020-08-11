@@ -173,7 +173,7 @@ footer p {
 }
 
 .projects {
-    box-shadow: 0 0 25px lightblue;
+    box-shadow: 0 0 7px lightblue;
     flex: 1;
     height: 175px;
     max-width: 30%;
@@ -186,12 +186,12 @@ footer p {
 
 .projects:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 55px lightblue;
+    box-shadow: 0 0 20px lightblue;
 }
 
 .projects p {
     font-weight: 600;
-    letter-spacing: 1.5px;
+    letter-spacing: 3px;
     margin-top: 20px;
     color: white;
     font-size: 25px;
@@ -220,7 +220,7 @@ footer p {
     border-radius: 5px;
     padding: 5px;
     margin: 7px;
-    box-shadow: 0 0 15px whitesmoke;
+    box-shadow: 0 0 5px whitesmoke;
 }
 
 .options h4:hover{
