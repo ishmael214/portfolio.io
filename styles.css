@@ -46,7 +46,7 @@ video {
 }
 
 .about {
-    filter: brightness(45%)
+    filter: brightness(15%)
 }
 header {
     min-height: 60px;
@@ -127,6 +127,12 @@ section p {
     font-size: 1.6em;
     font-weight: bold;
     cursor: pointer;
+}
+
+.aboutDesc {
+    margin-top: 2%;
+    padding: 20px;
+    font-size: 25px;
 }
 
 section p:hover{
@@ -214,16 +220,25 @@ footer p {
     justify-content: space-between;
 }
 
-.options h4 {
+.options a {
     background: black;
     color: white;
     border-radius: 5px;
-    padding: 5px;
+    padding: 10px;
     margin: 7px;
     box-shadow: 0 0 5px whitesmoke;
+    font-size: 13px;
 }
-
-.options h4:hover{
+.login {
+    background: black;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 7px;
+    box-shadow: 0 0 5px whitesmoke;
+    font-size: 16px;
+}
+.options a:hover, .login:hover{
     transform: scale(1.2);
     
 }
@@ -255,12 +270,12 @@ footer p {
     
 }
 
-.form {
+.form, .form1, .form2 {
     text-align: center;
     position: fixed;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%) /*scale (0)*/;
+    transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
     width: 750px;
     height: 500px;
@@ -271,7 +286,7 @@ footer p {
     z-index: 10;
 }
 
-.form.active {
+.form.active, .form1.active, .form2.active  {
     transform: translate(-50%, -50%) scale(1);
 }
 
