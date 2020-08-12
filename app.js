@@ -9,7 +9,7 @@ showProjects.addEventListener('click', () => {
     <div class ="form" id = "login">
                 <button data-close-button class="close-button">&times;</button>
                     <div class="summaryvid">
-                        <video src="media/backgroundvid.mp4" autoplay muted loop></video>
+                        <video src="realestatevid.mp4" autoplay muted loop></video>
                     </div>
                     <div class="summary">
                         <p>Made this to resemble a realistic real estate website</p>
@@ -19,7 +19,7 @@ showProjects.addEventListener('click', () => {
             <div class ="form1" id = "login">
             <button data-close-button class="close-button">&times;</button>
                 <div class="summaryvid">
-                    <video src="media/backgroundvid.mp4" autoplay muted loop></video>
+                    <video src="myflixvid.mp4" autoplay muted loop></video>
                 </div>
                 <div class="summary">
                     <p>MyFLIX is a netflix spinoff I made that'll have all my favorite movies, 
@@ -30,7 +30,7 @@ showProjects.addEventListener('click', () => {
         <div class ="form2" id = "login">
             <button data-close-button class="close-button">&times;</button>
                 <div class="summaryvid">
-                    <video src="media/backgroundvid.mp4" autoplay muted loop></video>
+                    <video src="pokedexvid.mp4" autoplay muted loop></video>
                 </div>
                 <div class="summary">
                     <p>A fun pokedex I created to practice using fetch and API's</p>
