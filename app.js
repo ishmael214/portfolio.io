@@ -42,7 +42,7 @@ showProjects.addEventListener('click', () => {
 
     <div class="subProjectContainer">
             <div class="projects">
-            <img src="/media/realestate.jpg">
+            <img src="realestate.jpg">
             <div class="options">
                 <h4 data-login-target="#login" class= "login" >View Desc</h4>
                 <a href ="https://ishmael214.github.io/realestateproject.io/" target="_blank"><h4>View Project</h4></a>
@@ -54,7 +54,7 @@ showProjects.addEventListener('click', () => {
         </div>
         <!-- WHEN U ADD JAVASCRIPT MAKE SURE TO LOWER BRIGHTNESS OF BACKGROUND VID -->
         <div class="projects">
-            <img src="/media/myflix.jpg">
+            <img src="myflix.jpg">
             <div class="options">
                 <h4 data-login-target="#login" class= "login" >View Desc</h4>
                 <a href ="https://ishmael214.github.io/myflix.io/" target="_blank"><h4>View Project</h4></a>
@@ -65,7 +65,7 @@ showProjects.addEventListener('click', () => {
         </div>
 
         <div class="projects">
-            <img src="/media/pokedex.jpg">
+            <img src="pokedex.jpg">
             <div class="options">
                 <h4 data-login-target="#login" class= "login" >View Desc</h4>
                 <a href ="https://ishmael214.github.io/pokedexproj.io/" target="_blank"><h4>View Project</h4></a>
