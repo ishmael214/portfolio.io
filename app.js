@@ -1,12 +1,14 @@
 const showProjects = document.querySelector("section p");
 const wrap = document.querySelector(".wrap");
 const video = document.querySelector("video");
+let overlay = null;
+let activeForm = null;
 
 showProjects.addEventListener('click', () => {
     video.style.filter = `brightness(35%)`;
     wrap.innerHTML = 
     `
-    <div class ="form" id = "login">
+    <div class ="form" id = "1">
                 <button data-close-button class="close-button">&times;</button>
                     <div class="summaryvid">
                         <video src="realestatevid.mp4" autoplay muted loop></video>
@@ -14,9 +16,9 @@ showProjects.addEventListener('click', () => {
                     <div class="summary">
                         <p>Made this to resemble a realistic real estate website</p>
                     </div>
-            </div>
+    </div>
 
-            <div class ="form1" id = "login">
+            <div class ="form" id = "2">
             <button data-close-button class="close-button">&times;</button>
                 <div class="summaryvid">
                     <video src="myflixvid.mp4" autoplay muted loop></video>
@@ -27,7 +29,7 @@ showProjects.addEventListener('click', () => {
                 </div>
         </div>
 
-        <div class ="form2" id = "login">
+        <div class ="form" id = "3">
             <button data-close-button class="close-button">&times;</button>
                 <div class="summaryvid">
                     <video src="pokedexvid.mp4" autoplay muted loop></video>
@@ -44,7 +46,7 @@ showProjects.addEventListener('click', () => {
             <div class="projects">
             <img src="realestate.jpg">
             <div class="options">
-                <h4 data-login-target="#login" class= "login" >View Desc</h4>
+                <h4 data-login-target="#login" class= "login" data-id="1" >View Desc</h4>
                 <a href ="https://ishmael214.github.io/realestateproject.io/" target="_blank"><h4>View Project</h4></a>
                 <a href ="https://github.com/ishmael214/realestateproject.io" target="_blank"><h4>View Code</h4></a>
                 
@@ -56,7 +58,7 @@ showProjects.addEventListener('click', () => {
         <div class="projects">
             <img src="myflix.jpg">
             <div class="options">
-                <h4 data-login-target="#login" class= "login" >View Desc</h4>
+                <h4 data-login-target="#login" class= "login" data-id="2" >View Desc</h4>
                 <a href ="https://ishmael214.github.io/myflix.io/" target="_blank"><h4>View Project</h4></a>
                 <a href ="https://github.com/ishmael214/animeflix" target="_blank"><h4>View Code</h4></a>
                 
@@ -67,7 +69,7 @@ showProjects.addEventListener('click', () => {
         <div class="projects">
             <img src="pokedex.jpg">
             <div class="options">
-                <h4 data-login-target="#login" class= "login" >View Desc</h4>
+                <h4 data-login-target="#login" class= "login" data-id="3" >View Desc</h4>
                 <a href ="https://ishmael214.github.io/pokedexproj.io/" target="_blank"><h4>View Project</h4></a>
                 <a href ="https://github.com/ishmael214/pokedexproj" target="_blank"><h4>View Code</h4></a>
                 
@@ -77,141 +79,53 @@ showProjects.addEventListener('click', () => {
 
                     
     </div>
-    `
-    const viewDesc = document.querySelectorAll(".login");
-    console.log(viewDesc);
+    `;
 
-    for ( const x of viewDesc) {
-        x.addEventListener('click', () => {
-           
-            if (x === viewDesc[0]) {
-                firstModalFunc();
-            } else if (x === viewDesc[1]) {
-                secondModalFunc();
-            } else {
-                thirdModalFunc();
-            } 
-        }) 
+    setTimeout(function(){
+        initApp();
+    }, 1000);
+
+    function initApp(){
+        const loginButtons = document.querySelectorAll(".login");
+        const closeButtons = document.querySelectorAll('[data-close-button]');
+        overlay = document.getElementById('overlay')
+        
+
+        console.log(loginButtons);
+
+        //add event listener to all login buttons
+        Array.from(loginButtons).forEach((x) => {
+            x.addEventListener('click', handleClick);
+        });
+
+        //add event listener to all close buttons
+        Array.from(closeButtons).forEach((x) => {
+            x.addEventListener('click', closeModal);
+        })
+
+        overlay.addEventListener('click', closeModal);
+    }   
+
+    const handleClick = (event) => {
+        const clickTarget = event.target;
+        const modalId = clickTarget.dataset.id;
+        openModal(modalId);
+    }
+
+    function closeModal(event){
+        const modalForm = document.getElementById(activeForm);
+        modalForm.classList.remove('active');
+        overlay.classList.remove('active');
+        activeForm = null;
+    }
+
+
+    function openModal(modalId) {
+        if (!modalId) return;
+        activeForm = modalId;
+        const modalForm = document.getElementById(modalId);
+        modalForm.classList.add('active');
+        overlay.classList.add('active');    
     }
 })
 
-const firstModalFunc = () => {
-const openModalButtons = document.querySelectorAll('[data-login-target]')
-const closeModalButtons = document.querySelectorAll('[data-close-button]')
-const overlay = document.getElementById('overlay')
-
-openModalButtons.forEach(p =>{
-    p.addEventListener('click', () => {
-        const login = document.querySelector(p.dataset.loginTarget)
-        openModal(login)
-    })
-})
-
-overlay.addEventListener('click', () => {
-    const modals = document.querySelectorAll('.form.active')
-    modals.forEach(login => {
-        closeModal(login)
-    })
-})
-
-closeModalButtons.forEach(p =>{
-    p.addEventListener('click', () => {
-        const login = p.closest('.form')
-        closeModal(login)
-    })
-})
-
-function openModal(login) {
-    if (login == null) return
-    login.classList.add('active')
-    overlay.classList.add('active')
-
-}
-
-function closeModal(login) {
-    if (login == null) return
-    login.classList.remove('active')
-    overlay.classList.remove('active')
-}
-}
-
-
-const secondModalFunc = () => {
-    const openModalButtons = document.querySelectorAll('[data-login-target]')
-    const closeModalButtons = document.querySelectorAll('[data-close-button]')
-    const overlay = document.getElementById('overlay')
-    
-    openModalButtons.forEach(p =>{
-        p.addEventListener('click', () => {
-            const login = document.querySelector(p.dataset.loginTarget)
-            openModal(login)
-        })
-    })
-    
-    overlay.addEventListener('click', () => {
-        const modals = document.querySelectorAll('.form1.active')
-        modals.forEach(login => {
-            closeModal(login)
-        })
-    })
-    
-    closeModalButtons.forEach(p =>{
-        p.addEventListener('click', () => {
-            const login = p.closest('.form1')
-            closeModal(login)
-        })
-    })
-    
-    function openModal(login) {
-        if (login == null) return
-        login.classList.add('active')
-        overlay.classList.add('active')
-    
-    }
-    
-    function closeModal(login) {
-        if (login == null) return
-        login.classList.remove('active')
-        overlay.classList.remove('active')
-    }
-}
-
-const thirdModalFunc = () => {
-    const openModalButtons = document.querySelectorAll('[data-login-target]')
-    const closeModalButtons = document.querySelectorAll('[data-close-button]')
-    const overlay = document.getElementById('overlay')
-    
-    openModalButtons.forEach(p =>{
-        p.addEventListener('click', () => {
-            const login = document.querySelector(p.dataset.loginTarget)
-            openModal(login)
-        })
-    })
-    
-    overlay.addEventListener('click', () => {
-        const modals = document.querySelectorAll('.form2.active')
-        modals.forEach(login => {
-            closeModal(login)
-        })
-    })
-    
-    closeModalButtons.forEach(p =>{
-        p.addEventListener('click', () => {
-            const login = p.closest('.form2')
-            closeModal(login)
-        })
-    })
-    
-    function openModal(login) {
-        if (login == null) return
-        login.classList.add('active')
-        overlay.classList.add('active')
-    
-    }
-    
-    function closeModal(login) {
-        if (login == null) return
-        login.classList.remove('active')
-        overlay.classList.remove('active')
-    }
-}    
