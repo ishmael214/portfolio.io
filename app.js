@@ -11,31 +11,43 @@ showProjects.addEventListener('click', () => {
     <div class ="form" id = "1">
                 <button data-close-button class="close-button">&times;</button>
                     <div class="summaryvid">
-                        <video src="realestatevid.mp4" autoplay muted loop></video>
+                        <video src="clonevid.mp4" autoplay muted loop></video>
                     </div>
                     <div class="summary">
-                        <p>Made this to resemble a realistic real estate website</p>
+                        <p>
+                            Building this Amazon clone really strengthened my understanding of React and Redux.
+                            Not only does it look similar to Amazon's website, I was also able to implement a 
+                            login & registration with user authentication via firebase, and handle payment processing
+                            via stripe and a backend server.
+                        </p>
                     </div>
     </div>
 
             <div class ="form" id = "2">
             <button data-close-button class="close-button">&times;</button>
                 <div class="summaryvid">
-                    <video src="myflixvid.mp4" autoplay muted loop></video>
+                    <video src="theproj.mp4" autoplay muted loop></video>
                 </div>
                 <div class="summary">
-                    <p>MyFLIX is a netflix spinoff I made that'll have all my favorite movies, 
-                    tv shows, anime, and manga on there, as well as my very own reviews.</p>
+                    <p>
+                        Building this project gave me a strong, well-needed foundation in React and Redux.
+                        It was also this project that taught me the importance of planning out the architecture 
+                        of a website as well as writing neat and organized code.
+                        In addition to that, throughout building this project I learned and exercised the
+                        ability to store data in firebase, authenticate user data, and integrate stripe
+                        payments.
+
+                    </p>
                 </div>
         </div>
 
         <div class ="form" id = "3">
             <button data-close-button class="close-button">&times;</button>
                 <div class="summaryvid">
-                    <video src="pokedexvid.mp4" autoplay muted loop></video>
+                    <video src="realestatevid.mp4" autoplay muted loop></video>
                 </div>
                 <div class="summary">
-                    <p>A fun pokedex I created to practice using fetch and API's</p>
+                    <p>I created this static website to display my ability to create clean, professional design for client's websites.</p>
                 </div>
         </div>
           
@@ -44,37 +56,37 @@ showProjects.addEventListener('click', () => {
 
     <div class="subProjectContainer">
             <div class="projects">
-            <img src="realestate.jpg">
+            <img src="amazon.png">
             <div class="options">
                 <h4 data-login-target="#login" class= "login" data-id="1" >View Desc</h4>
-                <a href ="https://ishmael214.github.io/realestateproject.io/" target="_blank"><h4>View Project</h4></a>
-                <a href ="https://github.com/ishmael214/realestateproject.io" target="_blank"><h4>View Code</h4></a>
+                <a href ="https://clone-37a95.web.app/" target="_blank"><h4>View Project</h4></a>
+                <a href ="https://github.com/ishmael214/amazon-clone" target="_blank"><h4>View Code</h4></a>
                 
             </div> 
-            <p>Real Estate </p> 
+            <p>Amazon Clone </p> 
                 
         </div>
         <!-- WHEN U ADD JAVASCRIPT MAKE SURE TO LOWER BRIGHTNESS OF BACKGROUND VID -->
         <div class="projects">
-            <img src="myflix.jpg">
+            <img src="ecommerce.jpg">
             <div class="options">
                 <h4 data-login-target="#login" class= "login" data-id="2" >View Desc</h4>
-                <a href ="https://ishmael214.github.io/myflix.io/" target="_blank"><h4>View Project</h4></a>
-                <a href ="https://github.com/ishmael214/animeflix" target="_blank"><h4>View Code</h4></a>
+                <a href ="https://ecommerce-sto.web.app/" target="_blank"><h4>View Project</h4></a>
+                <a href ="https://github.com/ishmael214/ecommerceproj" target="_blank"><h4>View Code</h4></a>
                 
             </div> 
-            <p>My Flix</p>    
+            <p>Ecommerce Store</p>    
         </div>
 
         <div class="projects">
-            <img src="pokedex.jpg">
+            <img src="newestate.jpg">
             <div class="options">
                 <h4 data-login-target="#login" class= "login" data-id="3" >View Desc</h4>
-                <a href ="https://ishmael214.github.io/pokedexproj.io/" target="_blank"><h4>View Project</h4></a>
-                <a href ="https://github.com/ishmael214/pokedexproj" target="_blank"><h4>View Code</h4></a>
+                <a href ="https://ishmael214.github.io/realestateproject.io/" target="_blank"><h4>View Project</h4></a>
+                <a href ="https://github.com/ishmael214/realestateproject.io" target="_blank"><h4>View Code</h4></a>
                 
             </div> 
-            <p>Pokedex</p>      
+            <p>Real Estate Site</p>      
         </div>
 
                     
